@@ -1,0 +1,20 @@
+<div id="modal">
+    <div class="modalContent">
+        <div class="searchbar">
+            <p class="searchlogo"><i class="bi bi-search"></i></p>
+            <input type="text" id="countrySearch" placeholder="Enter a country or currency">
+        </div>
+        <div class="countrySelector">
+            <div class="highlight"></div>
+            <% currencies.forEach(item => { %>
+                <div class="countries" data-code="<%= item.currency %>" data-rate="<%= item.rate %>">
+                  <div class="flag-box">
+                    <span class="fi fi-<%= item.currencyCode.toLowerCase() %> fis"></span>
+                  </div>
+                  <h2 class="country-name"><%= item.country %></h2>
+                  <h2 class="currency"><%= item.currency %></h2>
+                </div>
+              <% }) %>
+        </div>
+    </div>
+</div>
