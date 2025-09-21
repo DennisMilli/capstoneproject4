@@ -579,12 +579,31 @@ footer {
     background-color: var(--SUB_HEADCOLOR);
     bottom: 0;
     margin-bottom: 0;
-    padding: 0 2rem;
+    padding: 0 var(--PADDING-SIDE);
     position: fixed;
     width: 100%;
 }
-footer p, footer ul {
-    margin-bottom: 0;
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-container p,
+.footer-socials {
+    margin: 0;
+}
+.footer-container p {
+  font-weight: 500;
+  white-space: nowrap; /* ensures © line never breaks */
+}
+
+.footer-socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
 }
 footer svg {
     background-color: var(--SUB_HEADCOLOR);
@@ -607,7 +626,6 @@ footer svg:hover {
         justify-content: end;
         align-self: center;
         position: absolute;
-        top: 5vh;
         right: 1vw;
     }
 
@@ -850,7 +868,7 @@ footer svg:hover {
         top: 86px;
         height: 35px;
     } */
-    footer p {
+    .footer-container p {
         font-size: .8rem;
     }
 }
